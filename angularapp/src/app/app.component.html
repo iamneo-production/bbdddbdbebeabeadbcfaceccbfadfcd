@@ -7,6 +7,7 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+<--
 <style>
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -531,4 +532,36 @@
 
 
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet>-->
+
+
+<--tulasi-->
+<form [formGroup]="CurrencyForm" (ngSubmit)="onSubmitt()">
+  Source CCY
+  <select formControlName="fromCurrency" id="fromCurrency">
+      
+    <option Value="1.126735">USD</option>
+    <option Value="0.876893">GBP</option>
+    <option Value="79.677056">INR</option>
+  </select>
+  
+  <br>
+  <br>
+  Amount
+    <input type="number"  formControlName='amount' id="amount">
+    <br>
+    <br>
+    Target CCY 
+      <select formControlName="toCurrency" id="toCurrency">
+        <option Value="1.126735">USD</option>
+      <option Value="0.876893">GBP</option>
+      <option Value="79.677056">INR</option>
+      </select>
+      <br>
+    <button id="submitButton">Submit</button>
+  <br>
+  <br>
+  Output
+  <span id="result"></span>
+  <span id="resValue">{{resValue}}</span>
+  </form>
