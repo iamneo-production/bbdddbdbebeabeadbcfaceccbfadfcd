@@ -32,12 +32,11 @@ import { FormsModule } from '@angular/forms'; // Add this line
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
+//import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CurrencyConverterComponent
   ],
   imports: [
     BrowserModule,
