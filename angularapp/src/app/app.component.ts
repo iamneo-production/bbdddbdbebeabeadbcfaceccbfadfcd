@@ -25,10 +25,11 @@
 //     //this.resValue='1.00';
 //     this.resValue=(this.toCurrency/this.fromCurrency)*this.amount;
 //     this.resValue=Math.round(this.resValue);
-//     this.resValue=parseFloat(this.resValue).toFixed(2);
-    
+//     this.resValue=parseFloat(this.resValue).toFixed(2);   
 //   }
 // }
+
+
 
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from "@angular/forms";

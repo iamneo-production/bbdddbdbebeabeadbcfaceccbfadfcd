@@ -1,4 +1,4 @@
-<form [formGroup]="CurrencyForm" (ngSubmit)="onSubmitt()">
+<!-- <form [formGroup]="CurrencyForm" (ngSubmit)="onSubmitt()">
   Source CCY
   <select formControlName="fromCurrency" id="fromCurrency">
       
@@ -26,4 +26,40 @@
   Output
   <span id="result"></span>
   <span id="resValue">{{resValue}}</span>
-  </form>
+  </form> -->
+
+  <div>
+    <h2>Currency Converter</h2>
+    <form (submit)="onSubmit()">
+      <div class="form-group">
+        <label for="fromCurrency">Source CCY:</label>
+        <select id="fromCurrency" class="form-control" [(ngModel)]="fromCurrency" name="fromCurrency">
+          <option value="USD">USD</option>
+          <option value="GBP">GBP</option>
+          <option value="INR">INR</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="toCurrency">Target CCY:</label>
+        <select id="toCurrency" class="form-control" [(ngModel)]="toCurrency" name="toCurrency">
+          <option value="USD">USD</option>
+          <option value="GBP">GBP</option>
+          <option value="INR">INR</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="amount">Amount (Rs):</label>
+        <input type="number" id="amount" class="form-control" [(ngModel)]="amount" name="amount">
+      </div>
+  
+      <button id="submitButton" type="submit" class="btn btn-primary">Convert</button>
+    </form>
+  
+    <div id="result" *ngIf="convertedAmount !== null">
+      <p>Result:</p>
+      <p>{{ amount }} {{ fromCurrency }} = {{ convertedAmount }} {{ toCurrency }}</p>
+    </div>
+  </div>
+  
